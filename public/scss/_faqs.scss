@@ -1,0 +1,307 @@
+/*** 
+
+====================================================================
+		FAQ's Sectiom
+====================================================================
+
+***/
+
+.faqs-section {
+    position: relative;
+    .form-bg{
+        position: absolute;
+        right: 15px;
+        left: -375px;
+        top: 0;
+        height: 100%;
+        @include background;
+        &:before{
+            @include overlay;
+            background-color: #222429;
+            opacity: .80;
+            content: "";
+        }
+    }
+    .faq-bg {
+        position: absolute;
+        left: 15px;
+        right: -375px;
+        height: 100%;
+        @include background;
+    }
+
+    &.style-two{
+        &:before{
+            position: absolute;
+            top: -300px;
+            right: -480px;
+            height: 100%;
+            width: 100%;
+            background-image: url(../images/icons/pattern-21.png);
+            background-repeat: no-repeat;
+            background-position: right top;
+            content: "";
+        }
+        .faq-column {
+            .inner-column {
+                padding-top: 120px;
+            }
+        }
+
+        .image-column{
+            position: relative;
+            margin-bottom: 50px;
+            .inner-column{
+                margin-left: -375px;
+                .image{
+                    position: relative;
+                    margin-bottom: 10px;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .info-box{
+                position: relative;
+                padding: 45px 45px;
+                background-color: var(--bg-theme-color2);
+                background-image: url(../images/icons/icon-lines-5.png);
+                background-repeat: no-repeat;
+                background-position: left top;
+                &:hover{
+                    .icon{
+                        transform: rotateY(180deg);
+                        background-color: var(--bg-theme-color3);
+                        color: var(--theme-color1);
+                        box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+                    }
+                }
+                .inner{
+                    padding-right: 200px;
+                    position: relative;
+                    min-height: 140px;
+                    text-align: right;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                }
+                .title{
+                    margin-bottom: 0;
+                }
+                .icon{
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    height: 140px;
+                    width: 140px;
+                    border-radius: 50%;
+                    background-color: var(--bg-theme-color1);
+                    color: var(--theme-color2);
+                    font-size: 78px;
+                    @include flex-center;
+                    transition: all 300ms ease;
+                }
+            }
+        }
+    }
+}
+
+.faqs-section .faq-column {
+    position: relative;
+    .inner-column {
+        position: relative;
+        padding: 70px 70px 60px;
+        padding-right: 0;
+    }
+}
+
+.faqs-section .form-column {
+    position: relative;
+    .inner-column {
+        position: relative;
+        padding: 70px 70px 70px;
+        padding-left: 0;
+    }
+}
+
+
+.accordion-box {
+    position: relative;
+    .block {
+        position: relative;
+        background-color: #ffffff;
+        box-shadow: 0 5px 40px rgba(0, 0, 0, .05);
+        margin-bottom: 10px;
+        .acc-btn {
+            position: relative;
+            font-size: 18px;
+            line-height: 25px;
+            color: var(--theme-color1);
+            font-weight: 700;
+            cursor: pointer;
+            padding: 20px 30px;
+            padding-right: 70px;
+            transition: all 500ms ease;
+            border-bottom: 1px solid var(--border-theme-color3);
+            .icon {
+                position: absolute;
+                right: 30px;
+                top: 20px;
+                height: 35px;
+                font-size: 14px;
+                line-height: 25px;
+                color: var(--theme-color1);
+                transition: all 500ms ease;
+            }
+            &.active {
+                color: var(--theme-color1);
+                background-color: var(--bg-theme-color2);
+                .icon {
+                    color: var(--bg-theme-color1);
+            
+                    &:before {
+                        content: "\f068";
+                    }
+                }
+            }
+        }
+        .acc-content {
+            position: relative;
+            display: none;
+            .content {
+                position: relative;
+                padding: 25px 30px;
+                .text {
+                    display: block;
+                    font-size: 16px;
+                    line-height: 30px;
+                    color: #808287;
+                    margin-bottom: 0;
+                }
+            }
+
+            &.current {
+                display: block;
+            }
+        }
+    }
+}
+
+
+.contact-form {
+    position: relative;
+    background-color: #2c2e33;
+    padding: 55px 55px 55px;
+    border-top: 5px solid var(--border-theme-color2);
+    .title-box{
+        position: relative;
+        margin-bottom: 25px;
+        .sub-title{
+            display: block;
+            font-size: 12px;
+            color: var(--theme-color2);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+            margin-bottom: 2px;
+        }
+        h3{
+            font-size: 34px;
+            color: #fff;
+            font-weight: 700;
+        }
+    }
+    .form-group {
+        position: relative;
+        margin-bottom: 20px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        label {
+            font-size: 16px;
+            line-height: 20px;
+            color: #ffffff;
+            font-weight: 500;
+            display: block;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            &.error {
+                display: block;
+                font-weight: 500;
+                font-size: 13px;
+                text-transform: capitalize;
+                line-height: 24px;
+                color: #ff0000;
+                margin-bottom: 0;
+            }
+        }
+        .select2-container--default .select2-selection--single,
+        input:not([type="submit"]),
+        textarea,
+        select {
+            position: relative;
+            display: block;
+            height: 54px;
+            width: 100%;
+            padding: 15px 30px;
+            font-size: 14px;
+            color: #fff;
+            line-height: 22px;
+            font-weight: 400;
+            background-color: #2c2e33;
+            border: 1px solid rgba(255, 255, 255, .15);
+            margin-bottom: 0;
+            transition: all 300ms ease;
+        }
+
+        ::-webkit-input-placeholder{color: #8c8f94;}
+        ::-moz-input-placeholder{color: #8c8f94;}
+        ::-ms-input-placeholder{color: #8c8f94;}
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: var(--border-theme-color2);
+        }
+
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        input[type="submit"],
+        button {
+            margin-top: 5px;
+            text-transform: uppercase;
+        }
+    }
+
+    &.light {
+        padding: 45px 55px 55px;
+        background-color: #ffffff;
+        box-shadow: 0 10px 60px rgba(0, 0, 0, .07);
+        &:before{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 223px;
+            height: 264px;
+            background-image: url(../images/icons/shape-5.png);
+            content: "";
+        }
+        .select2-container--default .select2-selection--single,
+        input:not([type="submit"]),
+        textarea,
+        select {
+            background-color: #f4f5f8;
+            color: var(--theme-color1);
+        }
+        .title-box h3{
+            color: var(--theme-color1);
+        }
+        textarea {
+            height: 110px;
+            resize: none;
+        }
+    }
+}

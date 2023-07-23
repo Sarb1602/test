@@ -1,0 +1,253 @@
+/*** 
+
+====================================================================
+    Why Choose Us
+====================================================================
+
+***/
+
+.why-choose-us{
+    position: relative;
+    background-color: #f4f5f8;
+    .content-column{
+        position: relative;
+        .inner-column{
+            padding-top: 120px;
+            .sec-title{
+                margin-bottom: 50px;
+            }
+        }
+        .image-box{
+            position: relative;
+            .image{
+                position: relative;
+                display: inline-block;
+                margin-bottom: 0;
+            }
+            .caption{
+                position: absolute;
+                left: 50px;
+                bottom: 0;
+                width: 100%;
+                max-width: 340px;
+                padding: 30px 60px 35px;
+                padding-right: 50px;
+                background-color: var(--bg-theme-color2);
+                font-size: 18px;
+                line-height: 32px;
+                color: var(--theme-color1);
+                font-weight: 700;
+            }
+        }
+    }
+
+    .image-column{
+        position: relative;
+        .inner-column{
+            margin-right: -358px;
+            margin-left: -17px;
+            .image{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+    Why Choose Us Two
+====================================================================
+
+***/
+
+.why-choose-us-two{
+    position: relative;
+    padding: 120px 0 70px;
+    &:before {
+        position: absolute;
+        left: -240px;
+        top: -160px;
+        height: 100%;
+        width: 100%;
+        background-image: url(../images/icons/pattern-7.png);
+        background-repeat: no-repeat;
+        background-position: center left;
+        content: "";
+    }
+
+    .content-column {
+        position: relative;
+        margin-bottom: 50px;
+        .inner-column {
+            position: relative;
+        }
+        .info-box{
+            position: relative;
+            background-color: #f4f5f8;
+            padding: 15px 30px;
+            padding-left: 60px;
+            margin-bottom: 30px;
+            transition: all 300ms ease;
+            &:hover{
+                box-shadow: 0 10px 30px rgba(0,0,0, .10);
+
+            }
+            .icon{
+                position: absolute;
+                left: 30px;
+                top: 0;
+                height: 60px;
+                line-height: 60px;
+                color: var(--theme-color2);
+            }
+            .title{
+                transition: all 300ms ease;
+                margin-bottom: 0;
+            }
+        }
+        .skills{
+            margin-top: 20px;
+            margin-bottom: 0;
+            .skill-item{
+                margin-bottom: 10px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+            .bar-inner .bar{
+                background-color: var(--bg-theme-color2);
+            }
+        }
+    }
+
+    .image-column {
+        position: relative;
+        margin-bottom: 50px;
+        .image-box {
+            position: relative;
+            padding-left: 100px;
+            margin-right: -360px;
+            .image {
+                position: relative;
+                margin-bottom: 0;
+                img{
+                    width: 100%;
+                }
+            }
+            .play-btn{
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 150px;
+                width: 160px;
+                background-color: var(--bg-theme-color2);
+                @include flex-center;
+                color: var(--theme-color1);
+                font-size: 28px;
+                transition: all 300ms ease;
+                &:hover{
+                    background-color: var(--bg-theme-color1);
+                    color: var(--theme-color2);
+                }
+            }
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+    Why Choose Us Three
+====================================================================
+
+***/
+
+.why-choose-us-three{
+    position: relative;
+    padding: 120px 0 70px;
+    overflow: hidden;
+    &:before{
+        position: absolute;
+        top: 0;
+        right: 50%;
+        margin-right: 350px;
+        height: 100%;
+        width: 100%;
+        background-color: var(--bg-theme-color2);
+        background-image: url(../images/icons/pattern-19.png);
+        content: "";
+        background-repeat: no-repeat;
+        background-position: center right;
+    }
+    &:after {
+        position: absolute;
+        right: 0;
+        bottom: -90px;
+        height: 480px;
+        width: 480px;
+        background-color: var(--bg-theme-color3);
+        content: "";
+        z-index: -1;
+        border-radius: 1000px 0 0 0;
+        animation: bounce-x 10s infinite linear;
+    }
+
+    .content-column {
+        position: relative;
+        margin-bottom: 50px;
+        .inner-column {
+            position: relative;
+            .sec-title{
+                margin-bottom: 25px;
+            }
+        }
+        .info-box {
+            position: relative;
+            padding-left: 80px;
+            margin-bottom: 30px;
+            transition: all 300ms ease;
+            .icon {
+                position: absolute;
+                left: 0;
+                top: 0;
+                font-size: 64px;
+                line-height: 1em;
+                color: var(--theme-color1);
+            }
+
+            .title {
+                color: var(--theme-color2);
+                font-weight: 400;
+                margin-bottom: 0;
+                transition: all 300ms ease;
+            }
+        }
+        .list-style-three {
+            padding-top: 45px;
+            border-top: 1px solid #e6e8ed;
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                width: 50%;
+                padding-right: 20px;
+            }
+        }
+    }
+
+    .image-column {
+        position: relative;
+        margin-bottom: 50px;
+        .image-box {
+            position: relative;
+            padding-right: 90px;
+            .image {
+                margin-bottom: 0;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
